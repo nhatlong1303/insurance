@@ -1,12 +1,56 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const colors = require('tailwindcss/colors');
-
 const commonColors = {
-   
+    red: {
+        red: '#EB2B3E',
+        1: '#FFBDC4',
+        2: '#F86876',
+        3: '#F01329',
+        4: '#CE0014'
+    },
+    green: {
+        green: '#02FCB9',
+        1: '#C2FEEE',
+        2: '#86FEDE',
+        3: '#49F5CD',
+        4: '#02CA95'
+    },
+    blue: {
+        blue: '#00ABF9',
+        1: '#D6F2FF',
+        2: '#99DFFF',
+        3: '#5CCBFF',
+        4: '#0070A3'
+    },
+    violet: {
+        violet: '#5C17FF',
+        1: '#D4C2FF',
+        2: '#9568FF',
+        3: '#6B2CFF',
+        4: '#3A00C5'
+    },
+    orange: {
+        orange: '#FFA721',
+        1: '#FFCE83',
+        2: '#FFC265',
+        3: '#FFB544',
+        4: '#E98C00'
+    },
+    yellow: {
+        yellow: '#F5ED5D',
+        1: '#FFFA9E',
+        2: '#FFF98C',
+        3: '#F8F068',
+        4: '#E8DF3F'
+    },
+    white: {
+        white: colors.white,
+        2: '#F8F8F8',
+        3: '#F2F3F4',
+    }
 };
 
 module.exports = {
-    mode: 'jit',
     content: [
         './src/pages/**/**/*.{js,ts,jsx,tsx}',
         './src/components/**/**/*.{js,ts,jsx,tsx}',
@@ -17,6 +61,8 @@ module.exports = {
             center: true,
         },
         fontWeight: {
+            thin: 100,
+            extralight: 200,
             light: 300,
             normal: 400,
             medium: 500,
@@ -26,9 +72,7 @@ module.exports = {
             black: 900,
         },
         fontFamily: {
-            sans: ['Barlow', 'sans-serif'],
-            serif: ['serif'],
-            inter: ['Inter', 'sans-serif'],
+            SVN: ['SVN-Outfit'],
         },
         fontSize: {
             xxs: [
@@ -127,20 +171,55 @@ module.exports = {
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
-
+            txtPrimary: '#22313F',
+            txtSecondary: '#808890',
+            redPrimary: '#EB2B3E',
+            btnOutline: '#FFF4F5',
+            red: {
+                DEFAULT: commonColors.red.red,
+                ...commonColors.red,
+            },
+            green: {
+                DEFAULT: commonColors.green.green,
+                ...commonColors.green,
+            },
+            blue: {
+                DEFAULT: commonColors.blue.blue,
+                ...commonColors.blue,
+            },
+            violet: {
+                DEFAULT: commonColors.violet.violet,
+                ...commonColors.violet,
+            },
+            orange: {
+                DEFAULT: commonColors.orange.orange,
+                ...commonColors.orange,
+            },
+            yellow: {
+                DEFAULT: commonColors.yellow.yellow,
+                ...commonColors.yellow,
+            },
+            white: {
+                DEFAULT: commonColors.white.white,
+                ...commonColors.white,
+            },
+            divider: {
+                DEFAULT: '#E5E7E8',
+                dark: '#202C4C',
+            },
         },
         extend: {
-           
+
             spacing: {
                 128: '32rem',
                 144: '36rem',
             },
             borderColor: ['group-focus'],
-            fontWeight: { bold: 600 },
             dropShadow: {
-             
+
             },
             boxShadow: {
+                lv4: '0px 6px 18px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)',
             },
             cursor: {
                 grabbing: 'grabbing'
@@ -157,6 +236,6 @@ module.exports = {
         },
     },
     plugins: [
-      
+
     ],
 };
